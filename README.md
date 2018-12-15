@@ -1,4 +1,4 @@
-# Crystals-Collector-Game
+# Crystals Collector Game
 Fun numbers guessing game utilizing the jQuery Library
 
 ## How to Play
