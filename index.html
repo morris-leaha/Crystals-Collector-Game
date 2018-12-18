@@ -26,39 +26,51 @@
 
         <div class="row" id="instructions">
             <div class="col">
-                <p>You will be given a random number at the start of the game.</p>
-                <p>There are four crystals below.  By clicking on a crystal you will add a specific amount of points to your total score.</p>
-                <p>To win, you must match your total score to the random number.</p>
-                <p>You will lose the game if your total score goes above the random number.</p>
-                <p>The value of each crystal is hidden from you until you click on it.</p>
-                <p>Each time when the game starts, the game will change the values of each crystal.</p>
+                <p class="h3">How To pLay:</p>
+                <ul>
+                    <li><p>You will be given a random number at the start of the game.</p></li>
+                    <li><p>There are four crystals below and each crystal is assigned a specific amount of points.</p></li>
+                        <ul>
+                            <li><p>By clicking on a crystal, you will add its specific amount of points to your total score.</p></li>
+                            <li><p>The value of each crystal will be hidden from you until you click on it.</p></li>
+                        </ul>
+                    <li><p>To <em>win</em> the game:</p></li>
+                        <ul>
+                            <li><p>You must match your total score to the random number.</p></li>
+                        </ul> 
+                    <li><p>You will <em>lose</em> the game if:</p></li>
+                        <ul>
+                            <li><p>Your total score goes above the random number.</p></li>
+                        </ul>
+                    <li><p><strong>NOTE: </strong>Each time when the game starts, the game will change the values of each crystal.</p></li>
+                </ul>
             </div>
         </div>
 
         <div class="row" id="game-information">
             <div class="col" id="random-generator">
-                <p id="random-number-text">Your Randomly Generated Number is:</p>
+                <p class="h5" id="random-number-text">random nuMber:</p>
                 <p id="random-number">X</p>
             </div>
             <div class="col" id="wins-losses-counter">
-                <p id="wins">Wins:</p>
-                <p id="losses">Losses:</p>
+                <p class="h5" id="wins">Wins:</p>
+                <p class="h5" id="losses">losses:</p>
             </div>
         </div>
 
         <div class="row" id="images">
             <div class="col" id="crystal-images">
-                <img id="crystal1" src="assets/images/#" alt="red-crystal">
-                <img id="crystal2" src="assets/images/#" alt="blue-crystal">
-                <img id="crystal3" src="assets/images/#" alt="yellow-crystal">
-                <img id="crystal4" src="assets/images/#" alt="green-crystal">
+                <button><img id="crystal1" src="assets/images/ruby.png" alt="red-crystal"></button>
+                <button><img id="crystal2" src="assets/images/sapphire.png" alt="red-crystal"></button>
+                <button><img id="crystal3" src="assets/images/emerald.png" alt="red-crystal"></button>
+                <button><img id="crystal4" src="assets/images/purple.png" alt="red-crystal"></button>
             </div>
         </div>
 
         <div class="row" id="user-information">
             <div class="col">
                 <div class="row">
-                   <div id="score-text">Your total score is:</div> 
+                   <div class="h5" id="score-text">your total score is:</div> 
                 </div>
                 <div class="row">
                     <div id="total-score">0</div> 
@@ -68,6 +80,12 @@
 
         </div>
     </section>
+
+    <footer class="footer fixed-bottom">
+        <div class="container text-center">
+            <span class="text-muted">Copyright &copy; 2018 Leah Morris</span>
+        </div>
+    </footer>
 
 </div>
     <script src="game.js"></script>

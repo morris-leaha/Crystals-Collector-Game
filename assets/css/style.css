@@ -6,8 +6,9 @@ body {
 
 .jumbotron {
     background: none;
+    margin: 0;
 }
 
-h1 {
+h1, .h3, .h5{
     font-family: 'Major Mono Display', monospace;
 }
