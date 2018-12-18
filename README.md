@@ -12,9 +12,9 @@ Fun numbers guessing game utilizing the jQuery Library
     * Each crystal is also randomly assigned a value (between 1-12)
     * The value of each crystal is hidden from the player until that crystal is clicked.
     * When a crystal is clicked, the player's total score will be updated.
-* Player will _win_ the game if:
+* Player will **win** the game if:
     * Player's total score is **equal** to the randomly assigned number
-* Player will _lose_ the game if:
+* Player will **lose** the game if:
     * Player's total score is **greater** than the randomly assigned number
 * Game will automatically restart when the player either wins -or- loses!
     * Player will receive a new randomly generated number to start with 
