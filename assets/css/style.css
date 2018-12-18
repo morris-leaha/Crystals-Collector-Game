@@ -1,0 +1,13 @@
+body {
+    background: #ffffff;
+    background-image: url("../images/gplaypattern.png");
+    background-size: cover;
+}
+
+.jumbotron {
+    background: none;
+}
+
+h1 {
+    font-family: 'Major Mono Display', monospace;
+}
