@@ -41,43 +41,42 @@ $(document).ready(function() {
     $("#loss-counter").text(losses);
         console.log("user number of losses is: " + losses);
 
-    // ONCE GAME STARTS:
-    // ADD "ON-CLICK" FUNCTION TO EACH CRYSTAL
-        // WHEN FIRST CRYSTAL IS CLICKED:
-            // GRAB VALUE FROM CRYSTAL
-            // MAKE THIS VALUE THE USER TOTAL SCORE
-            // UPDATE USER TOTAL SCORE IN HTML
-        // SUBSEQUENT CRYSTALS CLICKED:
-            // GRAB VALUE FROM CRYSTAL
-            // ADD CRYSTAL VALUE TO USER TOTAL SCORE
-            // UPDATE USER TOTAL SCORE IN HTML
+// ONCE GAME STARTS (USER ON-CLICKS):
 
     var crystalValue;
 
-    $("#ruby").on("click", function(){
-        crystalValue = $(this).val();
-        console.log("ruby grabbedValue= " + crystalValue);
-        $("total-score").html(totalScore += crystalValue);
+    $("#ruby").on("click", function(){  // ADD "ON-CLICK" FUNCTION TO EACH CRYSTAL
+        crystalValue = parseInt($(this).val());  // GRAB VALUE FROM "THIS" CRYSTAL & CHANGE TO INTEGER 
+            console.log("ruby grabbedValue= " + crystalValue);
+        totalScore += crystalValue;  // ADD THIS VALUE THE USER TOTAL SCORE
+            console.log("user total score is now: " + totalScore);
+        $("#total-score").html(totalScore);  // UPDATE USER TOTAL SCORE IN HTML
     });
 
     $("#sapphire").on("click", function(){
-        crystalValue = $(this).val();
-        console.log("sapphire grabbedValue= " + crystalValue);
+        crystalValue = parseInt($(this).val());
+            console.log("sapphire grabbedValue= " + crystalValue);
         totalScore += crystalValue;
+            console.log("user total score is now: " + totalScore);
+        $("#total-score").html(totalScore);
     });
 
     $("#emerald").on("click", function(){
-        crystalValue = $(this).val();
-        console.log("emerald grabbedValue= " + crystalValue);
+        crystalValue = parseInt($(this).val());
+            console.log("emerald grabbedValue= " + crystalValue);
         totalScore += crystalValue;
+            console.log("user total score is now: " + totalScore);
+        $("#total-score").html(totalScore);
     });
 
     $("#purple").on("click", function(){
-        crystalValue = $(this).val();
-        console.log("purple grabbedValue= " + crystalValue);
+        crystalValue = parseInt($(this).val());
+            console.log("purple grabbedValue= " + crystalValue);
         totalScore += crystalValue;
+            console.log("user total score is now: " + totalScore);
+        $("#total-score").html(totalScore);
     });
-        
+
 
     // ONCE USER TOTAL SCORE IS:
         // EQUAL TO RANDOM NUMBER --> USER WINS
