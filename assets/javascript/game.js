@@ -41,6 +41,35 @@ $(document).ready(function() {
     $("#loss-counter").text(losses);
         console.log("user number of losses is: " + losses);
 
+// resetGame()
+
+function resetGame () {
+
+    $("#msg").append("<p class='h5'>Go Again!</p>");
+
+    // REGENERATE A NEW STARTING RANDOM NUMBER FOR USER (BETWEEN 19-120)
+    randomNum = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+        console.log("reset randomNum: " + randomNum);
+        $("#random-number").text(randomNum);
+    
+    // REASSIGN EACH CRYSTAL A NEW RANDOM VALUE (BETWEEN 1-12) AND KEEP HIDDEN FROM PLAYER
+    ruby = Math.floor(Math.random() * 12) + 1; 
+        $("#ruby").attr("value", ruby);
+
+    sapphire = Math.floor(Math.random() * 12) + 1;
+        $("#sapphire").attr("value", sapphire);
+
+    emerald = Math.floor(Math.random() * 12) + 1;
+        $("#emerald").attr("value", emerald);
+
+    purple = Math.floor(Math.random() * 12) + 1;
+        $("#purple").attr("value", purple);
+
+    totalScore = 0;  // RESET THE PLAYER TOTAL SCORE TO 0
+        $("#total-score").html(totalScore);  
+}
+
+
 // ONCE GAME STARTS (USER ON-CLICKS):
 
     var crystalValue;
@@ -52,34 +81,19 @@ $(document).ready(function() {
             console.log("user total score is now: " + totalScore);
         $("#total-score").html(totalScore);  // UPDATE USER TOTAL SCORE IN HTML
     
-    if (totalScore === randomNum) {
-        wins++;
-        $("#win-counter").html(wins);
-    } else if (totalScore >= randomNum) {
-        losses++;
-        $("#loss-counter").html(losses);
+    if (totalScore === randomNum) {  // IF USER TOTAL SCORE IS EQUAL TO RANDOM NUMBER --> USER WINS
+        wins++;  // INCREMENT WINS BY 1
+        $("#win-counter").html(wins);  // ALERT USER THEY WON & UPDATE WINS IN DOM
+        $("#msg").html("<p class='h5'>yOu WOn!</p>");
+        resetGame();  // RESET THE GAME AFTER PLAYER WINS
+    } else if (totalScore >= randomNum) {  // IF GREATER THAN RANDOM NUMBER --> USER LOSES
+        losses++;  // INCREMENT LOSSES BY 1
+        $("#loss-counter").html(losses);  // ALERT USER THEY LOST & UPDATE LOSSES IN DOM
+        $("#msg").html("<p class='h5'>yOu LOsE!</p>");
+        resetGame();  // RESET THE GAME AFTER PLAYER LOSES
     }
 
-});
-
-    
-    
-    // IF USER TOTAL SCORE IS:
-        // EQUAL TO RANDOM NUMBER --> USER WINS
-            // INCREMENT WINS BY 1
-            // ALERT USER THEY WON & UPDATE WINS IN DOM
-                // RESET THE GAME AFTER PLAYER WINS:
-                    // REGENERATE A NEW STARTING RANDOM NUMBER FOR USER (BETWEEN 19-120)
-                    // REASSIGN EACH CRYSTAL A NEW RANDOM VALUE (BETWEEN 1-12) AND KEEP HIDDEN FROM PLAYER
-                    // RESET THE PLAYER TOTAL SCORE TO 0
-
-        // IF GREATER THAN RANDOM NUMBER --> USER LOSES
-            // INCREMENT LOSSES BY 1
-            // ALERT USER THEY LOST & UPDATE LOSSES IN DOM
-                // RESET THE GAME AFTER PLAYER LOSES:
-                    // REGENERATE A NEW STARTING RANDOM NUMBER FOR USER (BETWEEN 19-120)
-                    // REASSIGN EACH CRYSTAL A NEW RANDOM VALUE (BETWEEN 1-12) AND KEEP HIDDEN FROM PLAYER
-                    // RESET THE PLAYER TOTAL SCORE TO 0
+    });
 
 });
 
