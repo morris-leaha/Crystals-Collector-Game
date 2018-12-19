@@ -25,7 +25,7 @@
     <section class="main-section">
 
         <div class="row" id="instructions">
-            <div class="col">
+            <div class="col how-to">
                 <p class="h3">How To pLay:</p>
                 <ul>
                     <li><p>You will be given a random number at the start of the game.</p></li>
@@ -41,18 +41,18 @@
                     <li><p>You will <em>lose</em> the game if:</p></li>
                         <ul>
                             <li><p>Your total score goes above the random number.</p></li>
-                        </ul>
+                        </ul><br>
                     <li><p><strong>NOTE: </strong>Each time when the game starts, the game will change the values of each crystal.</p></li>
                 </ul>
             </div>
         </div>
 
         <div class="row" id="game-information">
-            <div class="col" id="random-generator">
+            <div class="col text-left game-info" id="random-generator">
                 <p class="h5" id="random-number-text">random nuMber:</p>
-                <p id="random-number">X</p>
+                <p class="h5" id="random-number"></p>
             </div>
-            <div class="col" id="wins-losses-counter">
+            <div class="col text-right game-info" id="wins-losses-counter">
                 <p class="h5" id="wins">Wins:&nbsp;<span id="win-counter"></span></p>
                 <p class="h5" id="losses">losses:&nbsp;<span id="loss-counter"></span></p>
             </div>
@@ -68,20 +68,16 @@
         </div>
 
         <div class="row" id="user-information">
-            <div class="col">
-                <div class="row">
-                   <div class="h5" id="score-text">your total score is:</div> 
-                </div>
-                <div class="row">
-                    <div id="total-score"></div> 
-                </div>
+            <div class="col score">
+                <p class="h5" id="score-text">your total score is:</p>
+                <p class="h5" id="total-score"></p>
             </div>
         </div>
 
         </div>
     </section>
 
-    <footer class="footer fixed-bottom">
+    <footer class="footer">
         <div class="container text-center">
             <span class="text-muted">Copyright &copy; 2018 Leah Morris</span>
         </div>
