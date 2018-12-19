@@ -51,47 +51,18 @@ $(document).ready(function() {
         totalScore += crystalValue;  // ADD THIS VALUE THE USER TOTAL SCORE
             console.log("user total score is now: " + totalScore);
         $("#total-score").html(totalScore);  // UPDATE USER TOTAL SCORE IN HTML
-    });
-
-    // $("#ruby").on("click", function(){  // ADD "ON-CLICK" FUNCTION TO EACH CRYSTAL
-    //     crystalValue = parseInt($(this).val());  // GRAB VALUE FROM "THIS" CRYSTAL & CHANGE TO INTEGER 
-    //         console.log("ruby grabbedValue= " + crystalValue);
-    //     totalScore += crystalValue;  // ADD THIS VALUE THE USER TOTAL SCORE
-    //         console.log("user total score is now: " + totalScore);
-    //     $("#total-score").html(totalScore);  // UPDATE USER TOTAL SCORE IN HTML
-    // });
-
-    // $("#sapphire").on("click", function(){
-    //     crystalValue = parseInt($(this).val());
-    //         console.log("sapphire grabbedValue= " + crystalValue);
-    //     totalScore += crystalValue;
-    //         console.log("user total score is now: " + totalScore);
-    //     $("#total-score").html(totalScore);
-    // });
-
-    // $("#emerald").on("click", function(){
-    //     crystalValue = parseInt($(this).val());
-    //         console.log("emerald grabbedValue= " + crystalValue);
-    //     totalScore += crystalValue;
-    //         console.log("user total score is now: " + totalScore);
-    //     $("#total-score").html(totalScore);
-    // });
-
-    // $("#purple").on("click", function(){
-    //     crystalValue = parseInt($(this).val());
-    //         console.log("purple grabbedValue= " + crystalValue);
-    //     totalScore += crystalValue;
-    //         console.log("user total score is now: " + totalScore);
-    //     $("#total-score").html(totalScore);
-    // });
-
+    
     if (totalScore === randomNum) {
         wins++;
-        alert("You win!");
+        $("#win-counter").html(wins);
     } else if (totalScore >= randomNum) {
         losses++;
-        alert("You lose!");
+        $("#loss-counter").html(losses);
     }
+
+});
+
+    
     
     // IF USER TOTAL SCORE IS:
         // EQUAL TO RANDOM NUMBER --> USER WINS
