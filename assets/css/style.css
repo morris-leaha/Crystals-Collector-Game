@@ -29,12 +29,16 @@ h1, .h3, .h5{
     margin-bottom: 3rem;
 }
 
-ul {
-    margin-bottom: 0;
-}
-
 .game-info {
     margin-bottom: 2rem;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:active {
+    transform: translateY(2px);
 }
 
 .score {
